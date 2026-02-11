@@ -7,7 +7,7 @@ const authMiddleware = (req, res, next) => {
     return res.status(401).json({ message: 'Token required' });
   }
 
-  const token = authHeader.split(' ');
+  const token = authHeader.split(' ')[1];
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
