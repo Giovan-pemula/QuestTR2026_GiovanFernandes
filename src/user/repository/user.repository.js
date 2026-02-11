@@ -1,4 +1,3 @@
-const { number } = require('joi');
 const db = require('../../helpers/db');
 
 const findUserByEmail = async (email) => {
